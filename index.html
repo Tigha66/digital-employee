@@ -127,12 +127,18 @@
       <p class="text-slate-400 text-center mb-12">Your AI employee works with your existing stack</p>
       
       <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-        {['Gmail', 'Google Calendar', 'Slack', 'HubSpot', 'Salesforce', 'Zapier', 'Notion', 'Airtable', 'Zoom', 'Stripe', 'Shopify', 'WordPress'].map(tool => (
-          <div key={tool} class="glass rounded-xl p-4 flex items-center justify-center gap-2">
-            <i class="fas fa-check-circle text-green-400"></i>
-            <span>{tool}</span>
-          </div>
-        ))}
+        <div class="glass rounded-xl p-4 flex items-center justify-center gap-2"><i class="fas fa-check-circle text-green-400"></i><span>Gmail</span></div>
+        <div class="glass rounded-xl p-4 flex items-center justify-center gap-2"><i class="fas fa-check-circle text-green-400"></i><span>Google Calendar</span></div>
+        <div class="glass rounded-xl p-4 flex items-center justify-center gap-2"><i class="fas fa-check-circle text-green-400"></i><span>Slack</span></div>
+        <div class="glass rounded-xl p-4 flex items-center justify-center gap-2"><i class="fas fa-check-circle text-green-400"></i><span>HubSpot</span></div>
+        <div class="glass rounded-xl p-4 flex items-center justify-center gap-2"><i class="fas fa-check-circle text-green-400"></i><span>Salesforce</span></div>
+        <div class="glass rounded-xl p-4 flex items-center justify-center gap-2"><i class="fas fa-check-circle text-green-400"></i><span>Zapier</span></div>
+        <div class="glass rounded-xl p-4 flex items-center justify-center gap-2"><i class="fas fa-check-circle text-green-400"></i><span>Notion</span></div>
+        <div class="glass rounded-xl p-4 flex items-center justify-center gap-2"><i class="fas fa-check-circle text-green-400"></i><span>Airtable</span></div>
+        <div class="glass rounded-xl p-4 flex items-center justify-center gap-2"><i class="fas fa-check-circle text-green-400"></i><span>Zoom</span></div>
+        <div class="glass rounded-xl p-4 flex items-center justify-center gap-2"><i class="fas fa-check-circle text-green-400"></i><span>Stripe</span></div>
+        <div class="glass rounded-xl p-4 flex items-center justify-center gap-2"><i class="fas fa-check-circle text-green-400"></i><span>Shopify</span></div>
+        <div class="glass rounded-xl p-4 flex items-center justify-center gap-2"><i class="fas fa-check-circle text-green-400"></i><span>WordPress</span></div>
       </div>
 
       <p class="text-center mt-8 text-slate-400">Plus 500+ more via Zapier & API</p>
@@ -146,25 +152,51 @@
       <p class="text-slate-400 text-center mb-12">Any task your human employee can do on a computer</p>
       
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {[
-          {icon:'envelope',title:'Email Management',desc:'Sort, respond, and organize emails automatically'},
-          {icon:'calendar',title:'Calendar Management',desc:'Schedule meetings, send invites, manage availability'},
-          {icon:'comments',title:'Lead Response',desc:'Instantly respond to leads with personalized messages'},
-          {icon:'tasks',title:'Task Automation',desc:'Create, assign, and follow up on tasks'},
-          {icon:'file-invoice',title:'Invoice Processing',desc:'Generate and send invoices automatically'},
-          {icon:'headset',title:'Customer Support',desc:'Handle support tickets with AI chat'},
-          {icon:'chart-line',title:'Reporting',desc:'Generate daily/weekly reports from your data'},
-          {icon:'clock',title:'Follow-ups',desc:'Never miss a follow-up again'},
-          {icon:'database',title:'CRM Updates',desc:'Keep your CRM updated automatically'},
-        ].map(task => (
-          <div key={task.title} class="glass rounded-xl p-6">
-            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center mb-4">
-              <i class={`fas fa-${task.icon} text-xl text-purple-400`}></i>
-            </div>
-            <h3 class="text-lg font-semibold mb-2">{task.title}</h3>
-            <p class="text-slate-400 text-sm">{task.desc}</p>
-          </div>
-        ))}
+        <div class="glass rounded-xl p-6">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center mb-4"><i class="fas fa-envelope text-xl text-purple-400"></i></div>
+          <h3 class="text-lg font-semibold mb-2">Email Management</h3>
+          <p class="text-slate-400 text-sm">Sort, respond, and organize emails automatically</p>
+        </div>
+        <div class="glass rounded-xl p-6">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center mb-4"><i class="fas fa-calendar text-xl text-purple-400"></i></div>
+          <h3 class="text-lg font-semibold mb-2">Calendar Management</h3>
+          <p class="text-slate-400 text-sm">Schedule meetings, send invites, manage availability</p>
+        </div>
+        <div class="glass rounded-xl p-6">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center mb-4"><i class="fas fa-comments text-xl text-purple-400"></i></div>
+          <h3 class="text-lg font-semibold mb-2">Lead Response</h3>
+          <p class="text-slate-400 text-sm">Instantly respond to leads with personalized messages</p>
+        </div>
+        <div class="glass rounded-xl p-6">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center mb-4"><i class="fas fa-tasks text-xl text-purple-400"></i></div>
+          <h3 class="text-lg font-semibold mb-2">Task Automation</h3>
+          <p class="text-slate-400 text-sm">Create, assign, and follow up on tasks</p>
+        </div>
+        <div class="glass rounded-xl p-6">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center mb-4"><i class="fas fa-file-invoice text-xl text-purple-400"></i></div>
+          <h3 class="text-lg font-semibold mb-2">Invoice Processing</h3>
+          <p class="text-slate-400 text-sm">Generate and send invoices automatically</p>
+        </div>
+        <div class="glass rounded-xl p-6">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center mb-4"><i class="fas fa-headset text-xl text-purple-400"></i></div>
+          <h3 class="text-lg font-semibold mb-2">Customer Support</h3>
+          <p class="text-slate-400 text-sm">Handle support tickets with AI chat</p>
+        </div>
+        <div class="glass rounded-xl p-6">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center mb-4"><i class="fas fa-chart-line text-xl text-purple-400"></i></div>
+          <h3 class="text-lg font-semibold mb-2">Reporting</h3>
+          <p class="text-slate-400 text-sm">Generate daily/weekly reports from your data</p>
+        </div>
+        <div class="glass rounded-xl p-6">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center mb-4"><i class="fas fa-clock text-xl text-purple-400"></i></div>
+          <h3 class="text-lg font-semibold mb-2">Follow-ups</h3>
+          <p class="text-slate-400 text-sm">Never miss a follow-up again</p>
+        </div>
+        <div class="glass rounded-xl p-6">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center mb-4"><i class="fas fa-database text-xl text-purple-400"></i></div>
+          <h3 class="text-lg font-semibold mb-2">CRM Updates</h3>
+          <p class="text-slate-400 text-sm">Keep your CRM updated automatically</p>
+        </div>
       </div>
     </div>
   </section>
