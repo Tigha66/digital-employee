@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Employee - AI Staff for Your Business</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://js.stripe.com/v3/"></script>
+  <style>
+    .glass{background:rgba(255,255,255,0.05);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1)}
+    .gradient{background:linear-gradient(135deg,#6366f1,#8b5cf6,#ec4899)}
+    .gradient-text{background:linear-gradient(135deg,#6366f1,#8b5cf6,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .float{animation:float 3s ease-in-out infinite}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    .pulse{animation:pulse 2s infinite}@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
+  </style>
+</head>
+<body class="bg-[#0a0a0f] text-white">
+  
+  <!-- Header -->
+  <header class="glass sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl gradient flex items-center justify-center">
+          <i class="fas fa-robot text-lg"></i>
+        </div>
+        <span class="text-xl font-bold">Digital Employee</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="#how-it-works" class="text-slate-400 hover:text-white">How It Works</a>
+        <a href="#integrations" class="text-slate-400 hover:text-white">Integrations</a>
+        <a href="#pricing" class="text-slate-400 hover:text-white">Pricing</a>
+        <a href="#contact" class="text-slate-400 hover:text-white">Contact</a>
+        <button onclick="openModal()" class="px-5 py-2 gradient rounded-xl font-medium">Get Started</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative py-20 overflow-hidden">
+    <div class="absolute inset-0 gradient opacity-10"></div>
+    <div class="max-w-7xl mx-auto px-6 relative">
+      <div class="text-center max-w-3xl mx-auto">
+        <div class="inline-flex items-center gap-2 bg-purple-500/20 px-4 py-2 rounded-full mb-6">
+          <span class="w-2 h-2 bg-purple-400 rounded-full pulse"></span>
+          <span class="text-purple-400 text-sm">Now serving 500+ businesses</span>
+        </div>
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+          Hire an <span class="gradient-text">AI Employee</span><br>That Never Sleeps
+        </h1>
+        <p class="text-xl text-slate-400 mb-8">
+          A fully-managed AI assistant that integrates with your existing tools (email, calendar, CRM) to handle your operations 24/7. Pay for results, not software.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button onclick="openModal()" class="px-8 py-4 gradient rounded-xl font-semibold text-lg">
+            Hire Your First AI Employee
+          </button>
+          <a href="#how-it-works" class="px-8 py-4 glass rounded-xl font-medium text-lg">
+            See How It Works
+          </a>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="grid md:grid-cols-4 gap-6 mt-16">
+        <div class="glass rounded-2xl p-6 text-center">
+          <p class="text-4xl font-bold gradient-text">500+</p>
+          <p class="text-slate-400">AI Employees Deployed</p>
+        </div>
+        <div class="glass rounded-2xl p-6 text-center">
+          <p class="text-4xl font-bold gradient-text">50K+</p>
+          <p class="text-slate-400">Hours Saved Monthly</p>
+        </div>
+        <div class="glass rounded-2xl p-6 text-center">
+          <p class="text-4xl font-bold gradient-text">99.9%</p>
+          <p class="text-slate-400">Uptime</p>
+        </div>
+        <div class="glass rounded-2xl p-6 text-center">
+          <p class="text-4xl font-bold gradient-text">4.9★</p>
+          <p class="text-slate-400">Client Rating</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how-it-works" class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-4">How It Works</h2>
+      <p class="text-slate-400 text-center mb-16 max-w-2xl mx-auto">We deploy a custom-trained AI employee that integrates with your existing tools and handles real work.</p>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass rounded-2xl p-8 relative">
+          <div class="absolute -top-4 -left-4 w-12 h-12 gradient rounded-xl flex items-center justify-center font-bold text-xl">1</div>
+          <div class="w-16 h-16 rounded-2xl bg-blue-500/20 flex items-center justify-center mb-6">
+            <i class="fas fa-plug text-3xl text-blue-400"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">We Connect</h3>
+          <p class="text-slate-400">We integrate with your existing tools: Gmail, Google Calendar, Slack, CRM, Zapier, and more. Your AI employee gets access to your data securely.</p>
+        </div>
+
+        <div class="glass rounded-2xl p-8 relative">
+          <div class="absolute -top-4 -left-4 w-12 h-12 gradient rounded-xl flex items-center justify-center font-bold text-xl">2</div>
+          <div class="w-16 h-16 rounded-2xl bg-purple-500/20 flex items-center justify-center mb-6">
+            <i class="fas fa-cogs text-3xl text-purple-400"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">We Configure</h3>
+          <p class="text-slate-400">We train your AI employee on your processes, workflows, and preferences. It learns your business rules and handling procedures.</p>
+        </div>
+
+        <div class="glass rounded-2xl p-8 relative">
+          <div class="absolute -top-4 -left-4 w-12 h-12 gradient rounded-xl flex items-center justify-center font-bold text-xl">3</div>
+          <div class="w-16 h-16 rounded-2xl bg-pink-500/20 flex items-center justify-center mb-6">
+            <i class="fas fa-rocket text-3xl text-pink-400"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">It Works</h3>
+          <p class="text-slate-400">Your AI employee starts working immediately. We monitor performance, optimize workflows, and provide monthly reports.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Integrations -->
+  <section id="integrations" class="py-20 bg-[#0f0f1a]">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-4">Integrations</h2>
+      <p class="text-slate-400 text-center mb-12">Your AI employee works with your existing stack</p>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        {['Gmail', 'Google Calendar', 'Slack', 'HubSpot', 'Salesforce', 'Zapier', 'Notion', 'Airtable', 'Zoom', 'Stripe', 'Shopify', 'WordPress'].map(tool => (
+          <div key={tool} class="glass rounded-xl p-4 flex items-center justify-center gap-2">
+            <i class="fas fa-check-circle text-green-400"></i>
+            <span>{tool}</span>
+          </div>
+        ))}
+      </div>
+
+      <p class="text-center mt-8 text-slate-400">Plus 500+ more via Zapier & API</p>
+    </div>
+  </section>
+
+  <!-- What It Can Do -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-4">What Your AI Employee Can Do</h2>
+      <p class="text-slate-400 text-center mb-12">Any task your human employee can do on a computer</p>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          {icon:'envelope',title:'Email Management',desc:'Sort, respond, and organize emails automatically'},
+          {icon:'calendar',title:'Calendar Management',desc:'Schedule meetings, send invites, manage availability'},
+          {icon:'comments',title:'Lead Response',desc:'Instantly respond to leads with personalized messages'},
+          {icon:'tasks',title:'Task Automation',desc:'Create, assign, and follow up on tasks'},
+          {icon:'file-invoice',title:'Invoice Processing',desc:'Generate and send invoices automatically'},
+          {icon:'headset',title:'Customer Support',desc:'Handle support tickets with AI chat'},
+          {icon:'chart-line',title:'Reporting',desc:'Generate daily/weekly reports from your data'},
+          {icon:'clock',title:'Follow-ups',desc:'Never miss a follow-up again'},
+          {icon:'database',title:'CRM Updates',desc:'Keep your CRM updated automatically'},
+        ].map(task => (
+          <div key={task.title} class="glass rounded-xl p-6">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center mb-4">
+              <i class={`fas fa-${task.icon} text-xl text-purple-400`}></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">{task.title}</h3>
+            <p class="text-slate-400 text-sm">{task.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-20 bg-[#0f0f1a]">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-4">Simple Pricing</h2>
+      <p class="text-slate-400 text-center mb-12">No hidden fees. Just results.</p>
+      
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <!-- Starter -->
+        <div class="glass rounded-2xl p-8">
+          <h3 class="text-xl font-bold mb-2">Starter</h3>
+          <p class="text-slate-400 text-sm mb-4">For small teams</p>
+          <div class="mb-6">
+            <span class="text-4xl font-bold">$997</span>
+            <span class="text-slate-400"> one-time setup</span>
+          </div>
+          <p class="text-2xl font-bold text-purple-400 mb-6">$297<span class="text-sm text-slate-400">/month</span></p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> 1 AI Employee</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> 5 integrations</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> 20 hours/month</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> Email support</li>
+          </ul>
+          <button onclick="selectPlan('starter')" class="w-full py-3 border border-purple-500 rounded-xl font-medium hover:bg-purple-500/20">Get Started</button>
+        </div>
+
+        <!-- Growth -->
+        <div class="glass rounded-2xl p-8 border-2 border-purple-500 relative">
+          <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-purple-500 px-4 py-1 rounded-full text-sm font-medium">Most Popular</div>
+          <h3 class="text-xl font-bold mb-2">Growth</h3>
+          <p class="text-slate-400 text-sm mb-4">For growing businesses</p>
+          <div class="mb-6">
+            <span class="text-4xl font-bold">$1,997</span>
+            <span class="text-slate-400"> one-time setup</span>
+          </div>
+          <p class="text-2xl font-bold text-purple-400 mb-6">$497<span class="text-sm text-slate-400">/month</span></p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> 2 AI Employees</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> 15 integrations</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> 50 hours/month</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> Priority support</li>
+          </ul>
+          <button onclick="selectPlan('growth')" class="w-full py-3 bg-purple-500 rounded-xl font-medium hover:bg-purple-600">Get Started</button>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="glass rounded-2xl p-8">
+          <h3 class="text-xl font-bold mb-2">Enterprise</h3>
+          <p class="text-slate-400 text-sm mb-4">For larger organizations</p>
+          <div class="mb-6">
+            <span class="text-4xl font-bold">Custom</span>
+          </div>
+          <p class="text-2xl font-bold text-purple-400 mb-6">$997<span class="text-sm text-slate-400">+/month</span></p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> Unlimited AI Employees</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> Unlimited integrations</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> Unlimited hours</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> Dedicated manager</li>
+          </ul>
+          <button onclick="selectPlan('enterprise')" class="w-full py-3 border border-purple-500 rounded-xl font-medium hover:bg-purple-500/20">Contact Us</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 gradient">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-6">Ready to Hire?</h2>
+      <p class="text-xl mb-8 opacity-90">Join 500+ businesses already saving 40+ hours per week with their AI employee.</p>
+      <button onclick="openModal()" class="px-10 py-4 bg-white text-purple-600 rounded-xl font-bold text-lg hover:scale-105 transition">
+        Schedule Free Consultation
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg gradient flex items-center justify-center">
+            <i class="fas fa-robot text-sm"></i>
+          </div>
+          <span class="font-bold">Digital Employee</span>
+        </div>
+        <p class="text-slate-400 text-sm">© 2026 Digital Employee. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Contact Modal -->
+  <div id="contactModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 p-4">
+    <div class="glass rounded-2xl p-8 w-full max-w-lg">
+      <div class="flex justify-between items-center mb-6">
+        <h3 class="text-2xl font-bold">Get Started</h3>
+        <button onclick="closeModal()" class="text-slate-400 hover:text-white"><i class="fas fa-times text-xl"></i></button>
+      </div>
+      
+      <form id="contactForm" class="space-y-4">
+        <div>
+          <label class="block text-slate-400 text-sm mb-2">Business Name</label>
+          <input type="text" id="businessName" required class="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white">
+        </div>
+        <div>
+          <label class="block text-slate-400 text-sm mb-2">Your Name</label>
+          <input type="text" id="name" required class="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white">
+        </div>
+        <div>
+          <label class="block text-slate-400 text-sm mb-2">Email</label>
+          <input type="email" id="email" required class="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white">
+        </div>
+        <div>
+          <label class="block text-slate-400 text-sm mb-2">Phone</label>
+          <input type="tel" id="phone" class="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white">
+        </div>
+        <div>
+          <label class="block text-slate-400 text-sm mb-2">What tasks do you want to automate?</label>
+          <textarea id="tasks" rows="3" class="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white"></textarea>
+        </div>
+        <button type="submit" class="w-full py-4 gradient rounded-xl font-semibold">Request Consultation</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Stripe Modal -->
+  <div id="stripeModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 p-4">
+    <div class="glass rounded-2xl p-8 w-full max-w-md">
+      <div class="flex justify-between items-center mb-6">
+        <h3 class="text-2xl font-bold">Subscribe</h3>
+        <button onclick="closeStripe()" class="text-slate-400 hover:text-white"><i class="fas fa-times text-xl"></i></button>
+      </div>
+      
+      <div id="planDetails" class="mb-6">
+        <p class="text-slate-400">Setup: <span id="setupFee" class="text-white font-bold"></span></p>
+        <p class="text-purple-400 text-2xl font-bold">Monthly: <span id="monthlyFee"></span></p>
+      </div>
+
+      <div class="space-y-4 mb-6">
+        <input type="text" placeholder="Card number" class="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white">
+        <div class="grid grid-cols-2 gap-4">
+          <input type="text" placeholder="MM/YY" class="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white">
+          <input type="text" placeholder="CVC" class="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white">
+        </div>
+      </div>
+
+      <button onclick="processPayment()" class="w-full py-4 gradient rounded-xl font-semibold">
+        Subscribe Now
+      </button>
+      <p class="text-center text-slate-500 text-xs mt-4">🔒 Secured by Stripe</p>
+    </div>
+  </div>
+
+  <script>
+    const planPrices = {
+      starter: { setup: '$997', monthly: '$297/mo' },
+      growth: { setup: '$1,997', monthly: '$497/mo' },
+      enterprise: { setup: 'Custom', monthly: 'Talk to sales' }
+    };
+
+    function openModal() {
+      document.getElementById('contactModal').classList.remove('hidden');
+      document.getElementById('contactModal').classList.add('flex');
+    }
+
+    function closeModal() {
+      document.getElementById('contactModal').classList.add('hidden');
+      document.getElementById('contactModal').classList.remove('flex');
+    }
+
+    function selectPlan(plan) {
+      document.getElementById('setupFee').textContent = planPrices[plan].setup;
+      document.getElementById('monthlyFee').textContent = planPrices[plan].monthly;
+      document.getElementById('stripeModal').classList.remove('hidden');
+      document.getElementById('stripeModal').classList.add('flex');
+    }
+
+    function closeStripe() {
+      document.getElementById('stripeModal').classList.add('hidden');
+      document.getElementById('stripeModal').classList.remove('flex');
+    }
+
+    function processPayment() {
+      alert('💳 Payment processed!\n\nIn production, this would:\n1. Process setup fee\n2. Set up monthly subscription\n3. Schedule onboarding call\n\nAdd your Stripe keys to enable real payments!');
+    }
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thanks! We\'ll contact you within 24 hours to schedule your free consultation.');
+      closeModal();
+    });
+  </script>
+</body>
+</html>
