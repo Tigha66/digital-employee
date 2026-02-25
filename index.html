@@ -91,7 +91,10 @@
           </div>
           <span class="text-xl font-bold">Digital Employee</span>
         </div>
-        <div class="hidden md:flex items-center gap-8">
+        <div class="hidden md:flex items-center gap-4">
+          <a href="mailto:tigha66@gmail.com" class="text-slate-400 hover:text-white transition text-sm">
+            <i class="fas fa-envelope mr-1"></i> tigha66@gmail.com
+          </a>
           <a href="#how-it-works" class="text-slate-400 hover:text-white transition">How It Works</a>
           <a href="#integrations" class="text-slate-400 hover:text-white transition">Integrations</a>
           <a href="#capabilities" class="text-slate-400 hover:text-white transition">Capabilities</a>
@@ -445,7 +448,16 @@
     
     <div class="max-w-4xl mx-auto px-6 text-center relative">
       <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Business?</h2>
-      <p class="text-xl text-slate-300 mb-10">Join 500+ businesses already saving 40+ hours per week with their AI employee.</p>
+      <p class="text-xl text-slate-300 mb-6">Join 500+ businesses already saving 40+ hours per week with their AI employee.</p>
+      
+      <!-- Email Contact Box -->
+      <div class="glass rounded-2xl p-6 mb-8 max-w-md mx-auto">
+        <p class="text-slate-400 mb-2">Or contact us directly:</p>
+        <a href="mailto:tigha66@gmail.com" class="text-2xl font-bold text-indigo-400 hover:underline">
+          <i class="fas fa-envelope mr-2"></i>tigha66@gmail.com
+        </a>
+      </div>
+      
       <button onclick="openModal()" class="gradient-btn px-10 py-5 rounded-xl font-bold text-xl pulse-glow">
         <i class="fas fa-rocket mr-2"></i> Schedule Free Consultation
       </button>
@@ -462,7 +474,13 @@
           </div>
           <span class="font-bold text-lg">Digital Employee</span>
         </div>
-        <p class="text-slate-400 text-sm">© 2026 Digital Employee. All rights reserved.</p>
+        
+        <div class="flex items-center gap-6">
+          <a href="mailto:tigha66@gmail.com" class="text-slate-400 hover:text-white transition">
+            <i class="fas fa-envelope mr-1"></i> tigha66@gmail.com
+          </a>
+          <p class="text-slate-400 text-sm">© 2026 Digital Employee. All rights reserved.</p>
+        </div>
       </div>
     </div>
   </footer>
@@ -574,8 +592,8 @@
       const phone = document.getElementById('phone').value;
       const tasks = document.getElementById('tasks').value;
       
-      // Show success
-      alert(`Thanks ${name}!\n\nWe've received your request for ${businessName}.\n\nWe'll contact you at ${email} within 24 hours.\n\nEmail: tigha66@gmail.com`);
+      // Show success with contact info
+      alert(`Thanks ${name}! 🎉\n\nWe've received your request for ${businessName}.\n\nWe'll contact you at ${email} within 24 hours.\n\nOr email us directly: tigha66@gmail.com`);
       closeModal();
     });
   </script>
