@@ -608,6 +608,24 @@
       const phone = document.getElementById('phone').value;
       const tasks = document.getElementById('tasks').value;
       
+      // Create lead object
+      const lead = {
+        name: name,
+        business: businessName,
+        email: email,
+        phone: phone,
+        message: tasks,
+        date: new Date().toISOString()
+      };
+      
+      // Save to localStorage
+      let leads = JSON.parse(localStorage.getItem('aiLeads') || '[]');
+      leads.push(lead);
+      localStorage.setItem('aiLeads', JSON.stringify(leads));
+      
+      // Log to console for monitoring
+      console.log('📋 NEW LEAD:', lead);
+      
       // Show success with contact info
       alert(`Thanks ${name}! 🎉\n\nWe've received your request for ${businessName}.\n\nWe'll contact you at ${email} within 24 hours.\n\nOr email us directly: tigha66@gmail.com`);
       closeModal();
