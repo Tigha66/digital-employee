@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Castles Estate Agents - AI Employee Demo Proposal</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+    .container { max-width: 700px; margin: 0 auto; background: #ffffff; }
+    .header { background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); padding: 50px 40px; text-align: center; }
+    .header h1 { color: #ffffff; font-size: 28px; margin-bottom: 10px; }
+    .header p { color: rgba(255,255,255,0.9); font-size: 16px; }
+    .logo { font-size: 48px; margin-bottom: 15px; }
+    .content { padding: 40px; }
+    .section { margin-bottom: 35px; }
+    .section-title { font-size: 22px; color: #1e3a5f; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 3px solid #1e3a5f; }
+    
+    .stats { display: flex; justify-content: space-around; background: #f0f4f8; border-radius: 12px; padding: 25px; margin: 20px 0; flex-wrap: wrap; gap: 15px; }
+    .stat { text-align: center; }
+    .stat-number { font-size: 28px; font-weight: bold; color: #1e3a5f; }
+    .stat-label { font-size: 12px; color: #666; }
+    
+    .demo-box { background: #f8fafc; border-radius: 12px; padding: 25px; margin: 20px 0; border: 2px solid #e2e8f0; }
+    .demo-box h4 { color: #1e3a5f; margin-bottom: 15px; font-size: 16px; }
+    .demo-label { background: #1e3a5f; color: #fff; padding: 3px 10px; border-radius: 4px; font-size: 11px; text-transform: uppercase; margin-bottom: 10px; display: inline-block; }
+    .demo-content { background: #fff; padding: 15px; border-radius: 8px; border-left: 4px solid #1e3a5f; font-size: 14px; }
+    .demo-content p { margin-bottom: 10px; }
+    .demo-content strong { color: #1e3a5f; }
+    
+    .features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 20px 0; }
+    .feature { background: #f8fafc; padding: 20px; border-radius: 10px; text-align: center; }
+    .feature-icon { font-size: 32px; margin-bottom: 10px; }
+    .feature-title { font-weight: 600; color: #1e3a5f; font-size: 14px; }
+    
+    .pricing { background: #f0f4f8; border-radius: 16px; padding: 30px; margin: 25px 0; text-align: center; }
+    .pricing h3 { color: #1e3a5f; margin-bottom: 20px; }
+    .pricing-amount { font-size: 36px; font-weight: bold; color: #1e3a5f; }
+    .pricing-period { font-size: 14px; color: #666; }
+    .pricing-setup { font-size: 14px; color: #888; margin-top: 5px; }
+    
+    .offices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 15px 0; }
+    .office { background: #f8fafc; padding: 12px; border-radius: 8px; text-align: center; font-size: 13px; }
+    
+    .cta { text-align: center; margin: 35px 0; }
+    .cta-button { display: inline-block; background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); color: #ffffff; padding: 18px 50px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 18px; }
+    
+    .footer { background: #1e3a5f; padding: 30px; text-align: center; }
+    .footer p { color: rgba(255,255,255,0.8); font-size: 14px; }
+    .footer .email { color: #64b5f6; font-size: 16px; font-weight: 600; margin: 10px 0; }
+    
+    @media (max-width: 600px) {
+      .features { grid-template-columns: 1fr; }
+      .offices { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">🏰</div>
+      <h1>Castles Estate Agents</h1>
+      <p>AI Employee Demo Proposal</p>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      
+      <!-- About -->
+      <div class="section">
+        <h3 class="section-title">🏰 About Castles</h3>
+        <p>Independent estate agent serving North & East London and Essex for 44+ years. 6 offices, 5-star Google rating, featured on Rightmove, Zoopla & OnTheMarket.</p>
+        
+        <div class="offices">
+          <div class="office">Hackney</div>
+          <div class="office">Palmers Green</div>
+          <div class="office">Enfield</div>
+          <div class="office">Edmonton</div>
+          <div class="office">Crouch End</div>
+          <div class="office">Waltham Abbey</div>
+        </div>
+      </div>
+
+      <!-- The Problem -->
+      <div class="section">
+        <h3 class="section-title">⚠️ Current Challenge</h3>
+        <p>With 6 offices handling 350+ enquiries per week, Castles needs instant response to maintain their 5-star reputation and never miss a lead.</p>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-number">355</div>
+          <div class="stat-label">Enquiries/Week</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">89h</div>
+          <div class="stat-label">Admin Time Saved</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">98%</div>
+          <div class="stat-label">Response Rate</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">£45k</div>
+          <div class="stat-label">Extra Revenue/Mo</div>
+        </div>
+      </div>
+
+      <!-- Features -->
+      <div class="section">
+        <h3 class="section-title">🤖 What AI Does</h3>
+        <div class="features">
+          <div class="feature">
+            <div class="feature-icon">📧</div>
+            <div class="feature-title">Lead Response</div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">📅</div>
+            <div class="feature-title">Viewing Booking</div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🔄</div>
+            <div class="feature-title">Follow-Up</div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🏠</div>
+            <div class="feature-title">Property Questions</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Demo -->
+      <div class="section">
+        <h3 class="section-title">📧 Live Demo: AI Response</h3>
+        
+        <div class="demo-box">
+          <span class="demo-label">Incoming Enquiry</span>
+          <div class="demo-content">
+            <p><strong>From:</strong> john.doe@email.com</p>
+            <p><strong>Subject:</strong> 3-bed flat in Palmers Green</p>
+            <p>"Hi, I saw your ad for the 3-bed flat on Green Lanes. Is it still available? When can I view it?"</p>
+          </div>
+        </div>
+
+        <div class="demo-box">
+          <span class="demo-label" style="background: #22c55e;">AI Response (2 minutes)</span>
+          <div class="demo-content">
+            <p>Hi John,</p>
+            <p>Thanks for your interest in our 3-bedroom flat on Green Lanes!</p>
+            <p><strong>Great news - it's still available!</strong></p>
+            <p>Viewing availability:</p>
+            <p>📅 Saturday 11am or 2pm<br>📅 Sunday 12pm</p>
+            <p>Which works for you?</p>
+            <p>Best regards,<br>Castles Estate Agents<br>Palmers Green Office<br>020 8888 6081</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pricing -->
+      <div class="pricing">
+        <h3>💰 Investment for Castles (6 Offices)</h3>
+        <div class="pricing-amount">£2,497</div>
+        <div class="pricing-period">/month</div>
+        <div class="pricing-setup">+ £9,997 one-time setup</div>
+        <p style="margin-top: 15px; font-size: 14px;">Includes: 6 AI Employees (1 per office), all integrations, training & support</p>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta">
+        <a href="mailto:tigha66@gmail.com" class="cta-button">Book Your Demo Call</a>
+        <p style="margin-top: 15px; font-size: 14px; color: #666;">15-minute call. No commitment. See AI in action.</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>Ready to transform your estate agency?</p>
+      <div class="email">tigha66@gmail.com</div>
+      <p>https://keen-salmiakki-4476bc.netlify.app/</p>
+    </div>
+  </div>
+</body>
+</html>
