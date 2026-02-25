@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Employee Proposal</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f0f1a; color: #fff; padding: 40px; }
+    .container { max-width: 700px; margin: 0 auto; background: #1a1a2e; border-radius: 20px; padding: 40px; }
+    .header { text-align: center; margin-bottom: 40px; }
+    .logo { width: 60px; height: 60px; background: linear-gradient(135deg, #818cf8, #c084fc, #f472b6); border-radius: 15px; display: inline-flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px; }
+    h1 { font-size: 32px; margin-bottom: 10px; background: linear-gradient(135deg, #818cf8, #c084fc, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    h2 { font-size: 24px; margin: 30px 0 15px; color: #fff; }
+    h3 { font-size: 18px; margin: 20px 0 10px; color: #c084fc; }
+    p { line-height: 1.8; color: #a0a0a0; margin-bottom: 15px; }
+    .highlight { background: linear-gradient(135deg, #818cf820, #c084fc20); padding: 20px; border-radius: 12px; margin: 20px 0; }
+    .price-box { background: #0f0f1a; padding: 25px; border-radius: 12px; text-align: center; margin: 20px 0; }
+    .price { font-size: 36px; font-weight: bold; color: #818cf8; }
+    .price-small { font-size: 14px; color: #666; }
+    .features { list-style: none; }
+    .features li { padding: 10px 0; border-bottom: 1px solid #333; }
+    .features li:last-child { border-bottom: none; }
+    .features li::before { content: "✓"; color: #10b981; margin-right: 10px; }
+    .cta { background: linear-gradient(135deg, #818cf8, #c084fc); padding: 20px; border-radius: 12px; text-align: center; margin: 30px 0; }
+    .cta a { color: #fff; text-decoration: none; font-weight: bold; font-size: 18px; }
+    .footer { text-align: center; padding-top: 30px; border-top: 1px solid #333; margin-top: 40px; }
+    .email { color: #818cf8; font-size: 18px; }
+    .problem { background: #1a1a2e; padding: 25px; border-radius: 12px; margin: 20px 0; }
+    .problem-item { display: flex; align-items: center; margin: 15px 0; }
+    .problem-item::before { content: "✕"; color: #ef4444; margin-right: 15px; }
+    .solution { background: linear-gradient(135deg, #10b98120, #10b98110); padding: 25px; border-radius: 12px; margin: 20px 0; border: 1px solid #10b981; }
+    .solution-item { display: flex; align-items: center; margin: 15px 0; }
+    .solution-item::before { content: "✓"; color: #10b981; margin-right: 15px; }
+    @media (max-width: 600px) { body { padding: 20px; } .container { padding: 25px; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">🤖</div>
+      <h1>Digital Employee</h1>
+      <p>Transform Your Business with AI</p>
+    </div>
+
+    <!-- Executive Summary -->
+    <h2>Executive Summary</h2>
+    <p>We help small businesses save 40+ hours per week by deploying custom AI employees that handle repetitive tasks - from email management to lead follow-ups.</p>
+    <p>You focus on revenue-generating activities while your AI employee handles the operations.</p>
+
+    <!-- The Problem -->
+    <h2>The Problem</h2>
+    <div class="problem">
+      <p>As a business owner, you likely face:</p>
+      <div class="problem-item">Missing important leads because you can't follow up fast enough</div>
+      <div class="problem-item">Spending hours each day on email management</div>
+      <div class="problem-item">Scheduling conflicts and missed appointments</div>
+      <div class="problem-item">Staff costs eating into your profits</div>
+      <div class="problem-item">Inconsistent client communication</div>
+    </div>
+
+    <!-- Our Solution -->
+    <h2>Our Solution</h2>
+    <div class="solution">
+      <p>Your custom AI employee handles:</p>
+      <div class="solution-item"><strong>Email Management</strong> - Sorts, prioritizes, and responds automatically</div>
+      <div class="solution-item"><strong>Lead Response</strong> - Instant personalized responses to new leads</div>
+      <div class="solution-item"><strong>Calendar Management</strong> - Handles scheduling and reminders</div>
+      <div class="solution-item"><strong>Follow-up Automation</strong> - Never miss a follow-up again</div>
+      <div class="solution-item"><strong>CRM Updates</strong> - Keeps your CRM synchronized</div>
+    </div>
+
+    <!-- Investment -->
+    <h2>Investment</h2>
+    
+    <div class="price-box">
+      <h3>Starter Package</h3>
+      <div class="price">$297<span class="price-small">/month</span></div>
+      <p style="color: #666;">+ $997 one-time setup</p>
+      <ul class="features">
+        <li>1 AI Employee</li>
+        <li>5 tool integrations</li>
+        <li>20 hours/month</li>
+        <li>Email support</li>
+      </ul>
+    </div>
+
+    <div class="price-box" style="border: 2px solid #818cf8;">
+      <div style="background: #818cf8; color: #fff; padding: 5px 15px; border-radius: 20px; display: inline-block; margin-bottom: 15px; font-size: 12px;">MOST POPULAR</div>
+      <h3>Growth Package</h3>
+      <div class="price">$497<span class="price-small">/month</span></div>
+      <p style="color: #666;">+ $1,997 one-time setup</p>
+      <ul class="features">
+        <li>2 AI Employees</li>
+        <li>15 tool integrations</li>
+        <li>50 hours/month</li>
+        <li>Priority support</li>
+      </ul>
+    </div>
+
+    <!-- ROI -->
+    <h2>Return on Investment</h2>
+    <div class="highlight">
+      <p><strong>Conservative Example:</strong></p>
+      <p>• Your time saved: 40 hours/month</p>
+      <p>• Your hourly value: $100/hour</p>
+      <p>• Value created: $4,000/month</p>
+      <p>• Our cost: $297/month</p>
+      <p style="color: #10b981; font-size: 20px; font-weight: bold; margin-top: 15px;">Net benefit: $3,703/month!</p>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta">
+      <a href="mailto:tigha66@gmail.com">📧 Schedule a Free Consultation</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p><strong>Contact:</strong></p>
+      <p class="email">tigha66@gmail.com</p>
+      <p style="margin-top: 20px; font-size: 12px; color: #666;">This proposal is valid for 30 days.</p>
+    </div>
+  </div>
+</body>
+</html>
